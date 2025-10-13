@@ -1,0 +1,239 @@
+/* CSS RESETS */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body, h1, h2, h3, p {
+  margin-block-end: 0;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1, h2, h3,
+button, input, label {
+  line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1, h2, h3 {
+  text-wrap: balance;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input, button {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* FONTS */
+
+/* josefin-sans-300 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Josefin Sans';
+  font-style: normal;
+  font-weight: 300;
+  src: url('../fonts/josefin-sans-v34-latin-300.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* josefin-sans-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Josefin Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/josefin-sans-v34-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* josefin-sans-600 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Josefin Sans';
+  font-style: normal;
+  font-weight: 600;
+  src: url('../fonts/josefin-sans-v34-latin-600.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* CUSTOM VARIABLES */
+
+:root {
+
+    /* COLORS */
+
+    --clr-white: #FFFFFF;
+    --clr-black: #000000;
+    --clr-gray-900: #423A3A;
+    --clr-red-400: #F96464;
+    --clr-pink-400: #CE9898;
+    --clr-gradient-1: linear-gradient(135deg, #F8BFBF, #EE8B8B);
+    --clr-gradient-2: linear-gradient(135deg, #FFFFFF, #FFF4F4);
+    --clr-gradient-3: linear-gradient(135deg, #FFF1F1, #FFFFFF);
+
+    /* TYPOGRAPHY */
+
+    --ff-main: "Josefin Sans", sans-serif;
+    --fs-body: clamp(0.875rem, 0.7557rem + 0.5089vw, 1rem);
+
+    /* SPACINGS */
+
+    --space-0: 0rem;
+    --space-100: 0.5rem;
+    --space-200: 1rem;
+    --space-300: 1.5rem;
+    --space-400: 2rem;
+    --space-500: 2.5rem;
+    --space-800: 4rem;
+    --space-1000: 5rem;
+    --space-1100: 5.5rem;
+    --space-1700: 8.5rem;
+}
+
+body {
+  font-family: var(--ff-main);
+  font-size: var(--fs-body);
+  line-height: clamp(1.3563rem, 0.8553rem + 2.1374vw, 1.8813rem);
+  background-image: var(--clr-gradient-2);
+  background-color: var(--white);
+  color: var(--clr-pink-400);
+}
+
+.header {
+  padding: var(--space-400);
+}
+
+.main__banner {
+  width: 100%;
+  height: clamp(15.625rem, 6.6794rem + 38.1679vw, 25rem);
+  background-image: url("images/hero-mobile.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.text-content {
+  padding: 0 clamp(var(--space-400), -5.723rem + 32.9517vw, 10.0938rem);
+  text-align: center;
+}
+
+.text-content__logo {
+  padding-block-start: var(--space-1000);
+  padding-block-end: var(--space-1700);
+}
+
+.text-content__title {
+  font-size: clamp(2.5rem, 1.0687rem + 6.1069vw, 4rem);
+  font-weight: 300;
+  text-transform: uppercase;
+  line-height: 1;
+  letter-spacing: 0.25em;
+  margin-block-end: clamp(1rem, 0.0458rem + 4.0712vw, 2rem);
+}
+
+.text-content__title-highlight {
+  color: var(--clr-gray-900);
+  font-weight: 600;
+}
+
+.text-content__description {
+  margin-block-end: var(--space-400);
+}
+
+.form__input-container {
+  position: relative;
+}
+
+.form__field {
+  width: 100%;
+  border: 1px solid var(--clr-pink-400);
+  padding-inline: clamp(var(--space-300), 1.0229rem + 2.0356vw, var(--space-400));
+  padding-block: clamp(var(--space-100), 0.0229rem + 2.0356vw, var(--space-200));
+  border-radius: 9999px;
+  color: inherit;
+  line-height: 2.15;
+  margin-block-end: var(--space-100);
+}
+
+.form__field:focus-visible {
+  outline: 2px solid var(--clr-pink-400);
+  outline-offset: 2px;
+} 
+
+.form__field::placeholder {
+  color: inherit;
+}
+
+.form__button {
+  background: var(--clr-gradient-1);
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: calc(100% - var(--space-100));
+  padding-inline: clamp(var(--space-300), 0.5458rem + 4.0712vw, var(--space-500));
+  padding-block: var(--space-200);
+  border: transparent;
+  border-radius: 9999px;
+}
+
+.form__error {
+  display: inline-block;
+  text-align: start;
+  color: var(--clr-red-400);
+  width: 100%;
+  padding-inline-start: clamp(var(--space-300), 1.0229rem + 2.0356vw, var(--space-400));
+}
+
+@media screen and (min-width: 48em) {
+
+  .text-content__title {
+    letter-spacing: 0.27em;
+    line-height: 1.1;
+  }
+
+  .main__banner {
+    background-image: url("images/hero-tablet.jpg");
+  }
+}
+
+@media screen and (min-width: 64em) {
+
+  .main {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+  }
+
+  .main__banner {
+    width: 70%;
+    height: 100vh;
+    background-image: url("images/hero-desktop.jpg");
+  }
+}
+
+.hidden {
+  display: none;
+}
