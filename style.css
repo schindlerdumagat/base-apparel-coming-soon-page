@@ -227,7 +227,7 @@ body {
 }
 
 .form__email-error {
-  display: none;
+  display: block;
   font-size: 0.813rem;
   font-weight: 400;
   line-height: 2.15;
@@ -235,10 +235,6 @@ body {
   text-align: start;
   color: var(--clr-red-400);
   margin-block-start: var(--space-100);
-}
-
-.form__email-error--visible {
-  display: block;
 }
 
 .form__error-icon {

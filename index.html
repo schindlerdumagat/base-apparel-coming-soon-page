@@ -34,13 +34,13 @@
             Add your email below to stay up-to-date with announcements and our
             launch deals.
           </p>
-          <form class="form">
+          <form class="form" novalidate>
             <div class="form__input-container">
-              <input class="form__email-input" type="email" name="email" aria-describedby="email-error" placeholder="Email Address" autocomplete="email">
+              <input class="form__email-input" type="email" name="email" aria-describedby="email-error" placeholder="Email Address" autocomplete="email" required>
               <button class="form__submit"><img class="form__submit-img" src="images/icon-arrow.svg" alt=""></button>
               <img class="form__error-icon" src="images/icon-error.svg" alt="" aria-hidden="true">
             </div>
-            <span id="email-error" class="form__email-error" aria-live="polite">Please provide a valid email</span>
+            <span id="email-error" class="form__email-error" aria-live="polite"></span>
           </form>
         </div>
       </section>
