@@ -17,6 +17,18 @@ emailForm.addEventListener("submit", (e) => {
 
 })
 
+emailInput.addEventListener('input', (e) => {
+  
+    if (!isEmailValid()) {
+        return;
+    }
+
+    emailInput.classList.remove("form__email-input--error");
+    emailErrorIcon.classList.remove("form__error-icon--visible");
+    emailError.textContent = "";
+
+})
+
 // Checks if the email provided is valid
 function isEmailValid() {
 
