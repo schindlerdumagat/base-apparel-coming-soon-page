@@ -17,24 +17,33 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-
-    <header class="header hidden">
-      <img class="header__logo" src="images/logo.svg" alt="base apparel">
+    <header class="header-mobile-tablet">
+      <img src="images/logo.svg" alt="base apparel" class="header__logo" width="100" height="20" />
     </header>
+
     <main class="main">
       <div class="main__banner"></div>
-      <div class="text-content">
-        <img class="text-content__logo" aria-hidden="true" src="images/logo.svg" alt="base apparel">
-        <h1 class="text-content__title">We're <strong class="text-content__title-highlight">coming soon</strong></h1>
-        <p class="text-content__description">Hello fellow shoppers! We're currently building our new fashion store. Add your email below to stay up-to-date with announcements and our launch deals.</p>
-        <form class="form">
-          <div class="form__input-container">
-            <input class="form__field" type="email" name="email" placeholder="Email Address" aria-label="Email Address" autocomplete="email">
-            <button class="form__button" type="submit"><img src="images/icon-arrow.svg" alt=""></button>
-          </div>
-          <span class="form__error" aria-live="polite">Email is Required</span>
-        </form>
-      </div>
+      <section class="text-section">
+        <div class="main__content">
+          <img class="main__laptop-logo" src="images/logo.svg" alt="base apparel" width="100" height="20" aria-hidden="true">
+          <h1 class="main__title">
+            we're <strong class="main__title-strong">coming soon</strong>
+          </h1>
+          <p class="main__description">
+            Hello fellow shoppers! We're currently building our new fashion store.
+            Add your email below to stay up-to-date with announcements and our
+            launch deals.
+          </p>
+          <form class="form">
+            <div class="form__input-container">
+              <input class="form__email-input" type="email" name="email" aria-describedby="email-error" placeholder="Email Address" autocomplete="email">
+              <button class="form__submit"><img class="form__submit-img" src="images/icon-arrow.svg" alt=""></button>
+              <img class="form__error-icon" src="images/icon-error.svg" alt="" aria-hidden="true">
+            </div>
+            <span id="email-error" class="form__email-error" aria-live="polite">Please provide a valid email</span>
+          </form>
+        </div>
+      </section>
     </main>
 
     <script src="script.js"></script>
